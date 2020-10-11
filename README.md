@@ -12,3 +12,14 @@ Luisa es licenciada en biología y actualmente se encuentra haciendo el doctorad
 Eugenia es ingeniera agrónoma y está haciendo su maestría en producción vegetal. Realiza trabajos mayormente en el campo y no es muy amiga de las computadoras. Es profesora en la materia “Citricultura” de la carrera de Ingeniería agronómica.
 Sabe usar infostat que es una IDE para análisis estadístico simple y Excel, además de Word y Powerpoint. Le interesa R para hacer cálculos de modelos mixtos para sus experimentos. No tiene nada de experiencia en programación. También le interesa aprender a hacer gráficos para poder publicar los trabajos de su maestría. 
 
+### Mapa Conceptual del tema (Concept Map)
+
+
+### Evaluación formativa (Formative assessment)
+
+
+
+
+
+
+
