@@ -200,40 +200,6 @@ torm1
 
 ---
 
-# `unite()`
-
---
-
-**Nos permite unir columnas en una sola**
-
---
-
-
-```r
-torm2 &lt;- torm1 %&gt;%
-  unite("fecha", #se crea la columna date
-        anio, mes, dia, #a partir de estas tres
-        sep="-") #separadas por un guion
-torm2
-```
-
-```
-## # A tibble: 6 x 4
-##   tormenta viento presion fecha     
-##   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;     
-## 1 Alberto     110    1007 2000-08-03
-## 2 Alex         45    1009 1998-07-27
-## 3 Allison      65    1005 1995-06-03
-## 4 Ana          40    1013 1997-06-30
-## 5 Arlene       50    1010 1999-06-11
-## 6 Arthur       45    1010 1996-06-17
-```
-
-
-  
-.footnote[Mas información: https://tidyr.tidyverse.org/reference/unite.html]
----
-
 # Ejercicio 📝
 
 
@@ -291,12 +257,95 @@ table3 %&gt;%
 
 
 
+---
+
+# `unite()`
+
+--
+
+**Nos permite unir columnas en una sola**
+
+--
+
+
+```r
+torm2 &lt;- torm1 %&gt;%
+  unite("fecha", #se crea la columna date
+        anio, mes, dia, #a partir de estas tres
+        sep="-") #separadas por un guion
+torm2
+```
+
+```
+## # A tibble: 6 x 4
+##   tormenta viento presion fecha     
+##   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;     
+## 1 Alberto     110    1007 2000-08-03
+## 2 Alex         45    1009 1998-07-27
+## 3 Allison      65    1005 1995-06-03
+## 4 Ana          40    1013 1997-06-30
+## 5 Arlene       50    1010 1999-06-11
+## 6 Arthur       45    1010 1996-06-17
+```
+
+
+  
+.footnote[Mas información: https://tidyr.tidyverse.org/reference/unite.html]
 
 ---
 
-# Tip: `separate_rows()`
+# Ejercicio 📝
 
 
+```r
+tidyr::table1
+```
+
+```
+## # A tibble: 6 x 4
+##   country      year  cases population
+##   &lt;chr&gt;       &lt;int&gt;  &lt;int&gt;      &lt;int&gt;
+## 1 Afghanistan  1999    745   19987071
+## 2 Afghanistan  2000   2666   20595360
+## 3 Brazil       1999  37737  172006362
+## 4 Brazil       2000  80488  174504898
+## 5 China        1999 212258 1272915272
+## 6 China        2000 213766 1280428583
+```
+
+
+```r
+table1 %&gt;%
+  unite("rate",
+        _____, _________,
+        sep="__")
+```
+
+
+---
+
+# Solución
+
+
+
+```r
+table1 %&gt;%
+  unite("rate",
+        cases, population,
+        sep="/")
+```
+
+```
+## # A tibble: 6 x 3
+##   country      year rate             
+##   &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;            
+## 1 Afghanistan  1999 745/19987071     
+## 2 Afghanistan  2000 2666/20595360    
+## 3 Brazil       1999 37737/172006362  
+## 4 Brazil       2000 80488/174504898  
+## 5 China        1999 212258/1272915272
+## 6 China        2000 213766/1280428583
+```
 
 
 

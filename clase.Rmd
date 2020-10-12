@@ -193,27 +193,6 @@ torm1
 
 ---
 
-# `unite()`
-
---
-
-**Nos permite unir columnas en una sola**
-
---
-
-```{r, message=FALSE}
-torm2 <- torm1 %>%
-  unite("fecha", #se crea la columna date
-        anio, mes, dia, #a partir de estas tres
-        sep="-") #separadas por un guion
-torm2
-```
-
-
-  
-.footnote[Mas información: https://tidyr.tidyverse.org/reference/unite.html]
----
-
 # Ejercicio `r emo::ji("pencil")`
 
 
@@ -244,12 +223,55 @@ table3 %>%
 
 
 
+---
+
+# `unite()`
+
+--
+
+**Nos permite unir columnas en una sola**
+
+--
+
+```{r, message=FALSE}
+torm2 <- torm1 %>%
+  unite("fecha", #se crea la columna date
+        anio, mes, dia, #a partir de estas tres
+        sep="-") #separadas por un guion
+torm2
+```
+
+
+  
+.footnote[Mas información: https://tidyr.tidyverse.org/reference/unite.html]
 
 ---
 
-# Tip: `separate_rows()`
+# Ejercicio `r emo::ji("pencil")`
+
+```{r}
+tidyr::table1
+```
+
+```{r eval=FALSE}
+table1 %>%
+  unite("rate",
+        _____, _________,
+        sep="__")
+```
 
 
+---
+
+# Solución
+
+
+```{r}
+table1 %>%
+  unite("rate",
+        cases, population,
+        sep="/")
+```
 
 
 
