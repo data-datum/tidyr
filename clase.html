@@ -4,6 +4,7 @@
     <title>clase.utf8</title>
     <meta charset="utf-8" />
     <link href="libs/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-logo/logo.js"></script>
     <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
@@ -13,6 +14,25 @@
   <body>
     <textarea id="source">
 
+background-image: url(img/portada.png)
+background-size: cover
+class: animated slideInRight fadeOutLeft, middle
+
+
+
+
+<style type="text/css">
+.xaringan-extra-logo {
+  width: 110px;
+  height: 128px;
+  z-index: 0;
+  background-image: url('img/tidyr.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top:1em;right:1em;
+}
+</style>
 
 
 
@@ -30,18 +50,64 @@
 
 
 
+# Ordenando datos con tidyr
+### Roxana Noelia Villafañe
 
 
+---
 
 
-# Ordenando datos con tidyr 
+# tidyr
+
+--
+
+# es una libreria de tidyverse 
+
+--
+
+# para ordenar datos
 
 
 
 ---
 
-# Que vamos a ver en este módulo
+# tidyr 
 
+Las funciones de tidyr pueden caer en estas 5 categorías:
+
+--
+
+📌 Separar y unir columnas de caracteres con `separate()` y `unite()`.
+
+
+--
+
+📌  [Pivotar tablas](https://tidyr.tidyverse.org/articles/pivot.html): con funciones como `pivot_longer()` y `pivot_wider()`.
+
+--
+
+📌 [Rectangular datos](https://tidyr.tidyverse.org/articles/rectangle.html). 
+
+--
+
+📌 [Anidar datos](https://tidyr.tidyverse.org/articles/nest.html) y desanidarlos. 
+
+--
+
+📌 Trabajar con valores perdidos. 
+
+--
+
+.footnote[Fuente: Documentación de tidyr - https://tidyr.tidyverse.org/]
+
+---
+
+# Mapa Conceptual 
+
+&lt;br&gt;&lt;br&gt;
+
+
+&lt;img src="img/map.jpg" width="130%" style="display: block; margin: auto;" /&gt;
 
 
 
@@ -53,15 +119,26 @@
 
 # Datos ordenados
 
-Se entiende por datos ordenados
+Se entiende por **datos ordenados**
 
+--
 
-&lt;img src="img/tidy-data.png" width="75%" style="display: block; margin: auto;" /&gt;
+📌 **.black[Cada variable en su columna]**
 
+--
+
+📌 **.black[Cada observación en su propia fila]**
+
+--
+
+📌 **.black[Cada valor en una celda]**
+
+--
+
+&lt;img src="img/tidy-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 
 ---
-
 
 # Ingresamos los datos
 
@@ -91,7 +168,11 @@ tormentas
 
 # `separate()`
 
-Nos permite separa una columna en otras columnas 
+--
+
+**Nos permite separa una columna en otras columnas**
+
+--
 
 
 ```r
@@ -115,14 +196,17 @@ torm1
 ```
 
 
-.footnote[https://tidyr.tidyverse.org/reference/separate.html]
+.footnote[Mas información: https://tidyr.tidyverse.org/reference/separate.html]
 
 ---
 
 # `unite()`
 
-Nos permite unir columnas en una sola
+--
 
+**Nos permite unir columnas en una sola**
+
+--
 
 
 ```r
@@ -147,12 +231,27 @@ torm2
 
 
   
+.footnote[Mas información: https://tidyr.tidyverse.org/reference/unite.html]
+---
+
+# Ejercicios 📝
+
+
+
+
+
+
+
 
 ---
 
-# Ejercicios 🚀
+# Solución 
 
 
+
+---
+
+# Tip: `separate_rows()`
 
 
 
@@ -160,7 +259,8 @@ torm2
 
 ---
 
-# Solución
+
+# Muchas gracias!
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

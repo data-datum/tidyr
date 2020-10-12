@@ -8,6 +8,9 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+background-image: url(img/portada.png)
+background-size: cover
+class: animated slideInRight fadeOutLeft, middle
 
 
 ```{r xaringan-extra-styles, include=FALSE}
@@ -17,6 +20,9 @@ xaringanExtra::use_extra_styles(
 )
 ```
 
+```{r xaringan-logo, echo=FALSE}
+xaringanExtra::use_logo("img/tidyr.png")
+```
 
 
 ```{r , echo=FALSE}
@@ -36,15 +42,15 @@ options(htmltools.dir.version = FALSE)
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
 style_duo_accent(
-  primary_color = "#382c6d",
+  primary_color = "#531c75",
   secondary_color = "#382c6d",
   inverse_header_color = "#FFFFFF"
 )
-#style_duo_accent(
-  #header_font_google = google_font("Microsoft Sans Serif", "500"),
-  #text_font_google   = google_font("Microsoft Sans Serif", "400", "300i"),
-  #code_font_google   = google_font("Microsoft Sans Serif")
-#)
+style_duo_accent(
+  header_font_google = google_font("Libre Caslon Text", "500"),
+  text_font_google   = google_font("Libre Caslon Text", "400", "300i"),
+  code_font_google   = google_font("Source Code Pro")
+)
 ```
 
 ```{r , message=FALSE, warning=FALSE, include=FALSE} 
@@ -59,14 +65,66 @@ xaringanExtra::use_fit_screen()
 ```
 
 
-# Ordenando datos con tidyr 
+# Ordenando datos con tidyr
+### Roxana Noelia Villafañe
+
+
+---
+
+
+# tidyr
+
+--
+
+# es una libreria de tidyverse 
+
+--
+
+# para ordenar datos
 
 
 
 ---
 
-# Que vamos a ver en este módulo
+# tidyr 
 
+Las funciones de tidyr pueden caer en estas 5 categorías:
+
+--
+
+`r emo::ji("pushpin")` Separar y unir columnas de caracteres con `separate()` y `unite()`.
+
+
+--
+
+`r emo::ji("pushpin")`  [Pivotar tablas](https://tidyr.tidyverse.org/articles/pivot.html): con funciones como `pivot_longer()` y `pivot_wider()`.
+
+--
+
+`r emo::ji("pushpin")` [Rectangular datos](https://tidyr.tidyverse.org/articles/rectangle.html). 
+
+--
+
+`r emo::ji("pushpin")` [Anidar datos](https://tidyr.tidyverse.org/articles/nest.html) y desanidarlos. 
+
+--
+
+`r emo::ji("pushpin")` Trabajar con valores perdidos. 
+
+--
+
+.footnote[Fuente: Documentación de tidyr - https://tidyr.tidyverse.org/]
+
+---
+
+# Mapa Conceptual 
+
+<br><br>
+
+
+```{r echo=FALSE, out.width = '130%',  fig.align='center'}
+knitr::include_graphics("img/map.jpg")
+```
 
 
 
@@ -78,17 +136,28 @@ xaringanExtra::use_fit_screen()
 
 # Datos ordenados
 
-Se entiende por datos ordenados
+Se entiende por **datos ordenados**
 
+--
 
-```{r echo=FALSE, out.width = '75%',  fig.align='center'}
-knitr::include_graphics("img/tidy-data.png")
+`r emo::ji("pushpin")` **.black[Cada variable en su columna]**
+
+--
+
+`r emo::ji("pushpin")` **.black[Cada observación en su propia fila]**
+
+--
+
+`r emo::ji("pushpin")` **.black[Cada valor en una celda]**
+
+--
+
+```{r echo=FALSE, out.width = '100%',  fig.align='center'}
+knitr::include_graphics("img/tidy-1.png")
 ```
 
 
-
 ---
-
 
 # Ingresamos los datos
 
@@ -105,7 +174,11 @@ tormentas
 
 # `separate()`
 
-Nos permite separa una columna en otras columnas 
+--
+
+**Nos permite separa una columna en otras columnas**
+
+--
 
 ```{r}
 torm1 <- tormentas %>% #set de datos 
@@ -116,14 +189,17 @@ torm1
 ```
 
 
-.footnote[https://tidyr.tidyverse.org/reference/separate.html]
+.footnote[Mas información: https://tidyr.tidyverse.org/reference/separate.html]
 
 ---
 
 # `unite()`
 
-Nos permite unir columnas en una sola
+--
 
+**Nos permite unir columnas en una sola**
+
+--
 
 ```{r, message=FALSE}
 torm2 <- torm1 %>%
@@ -135,10 +211,11 @@ torm2
 
 
   
-
+.footnote[Mas información: https://tidyr.tidyverse.org/reference/unite.html]
 ---
 
-# Ejercicios `r emo::ji("rocket")`
+# Ejercicios `r emo::ji("pencil")`
+
 
 
 ```{r}
@@ -154,3 +231,15 @@ torm2
 
 
 
+---
+
+# Tip: `separate_rows()`
+
+
+
+
+
+---
+
+
+# Muchas gracias! 
