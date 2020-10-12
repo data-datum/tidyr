@@ -2,7 +2,7 @@
 
 ## Ordenando datos con tidyr 
 
-* [Slides]() 
+* [Slides](https://data-datum.github.io/tidyr/clase.html#1) 
 
 ### Learner Persona (Descripción de estudiantes tipo)
 #### Alumnx 1: 
