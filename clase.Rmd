@@ -214,20 +214,34 @@ torm2
 .footnote[Mas información: https://tidyr.tidyverse.org/reference/unite.html]
 ---
 
-# Ejercicios `r emo::ji("pencil")`
-
+# Ejercicio `r emo::ji("pencil")`
 
 
 ```{r}
-
+tidyr::table3
 ```
 
+
+```{r eval=FALSE}
+table3 %>%
+    separate(__________, 
+             c("cases", "population"), 
+             sep="__")
+```
 
 
 
 ---
 
 # Solución 
+
+```{r}
+table3 %>%
+    separate(rate, #columna para dividir los datos
+             c("cases", "population"), #nuevas columnas
+             sep="/") #separador
+```
+
 
 
 
