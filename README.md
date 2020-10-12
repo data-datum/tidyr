@@ -2,7 +2,7 @@
 
 ## Ordenando datos con tidyr 
 
-* Slides
+* [Slides]() 
 
 ### Learner Persona (Descripción de estudiantes tipo)
 #### Alumnx 1: 
