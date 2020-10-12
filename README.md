@@ -19,7 +19,22 @@ Sabe usar infostat que es una IDE para análisis estadístico simple y Excel, ad
 
 ### Evaluación formativa (Formative assessment)
 
+#### Pregunta
+``` r
+table3 %>%
+    separate(__________, 
+             c("cases", "population"), 
+             sep="__")
+```
 
+#### Solución
+
+``` r
+table3 %>%
+    separate(rate, #columna para dividir los datos
+             c("cases", "population"), #nuevas columnas
+             sep="/") #separador
+```
 
 ### Librerias necesarias 
 
@@ -29,9 +44,6 @@ Sabe usar infostat que es una IDE para análisis estadístico simple y Excel, ad
 
 #cargo librerias
 library(tidyverse)
-
-#ingresar el set de datos
-
 
 ```
 
