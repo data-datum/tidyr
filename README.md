@@ -14,7 +14,7 @@ Sabe usar infostat que es una IDE para análisis estadístico simple y Excel, ad
 
 ### Mapa Conceptual del tema (Concept Map)
 
-<img src="img/map.jpg" width="1833" />
+<img src="img/map.jpg" width="100" />
 
 
 ### Evaluación formativa (Formative assessment)
