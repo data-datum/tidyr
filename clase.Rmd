@@ -117,13 +117,27 @@ Las funciones de tidyr pueden caer en estas 5 categorías:
 
 ---
 
-# Mapa Conceptual 
+# Mapa Conceptual del tema
 
 <br><br>
 
 
 ```{r echo=FALSE, out.width = '130%',  fig.align='center'}
 knitr::include_graphics("img/map.jpg")
+```
+
+
+
+---
+
+
+# En esta clase
+
+<br>
+
+
+```{r echo=FALSE, out.width = '130%',  fig.align='center'}
+knitr::include_graphics("img/map2.png")
 ```
 
 
