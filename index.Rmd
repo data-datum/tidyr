@@ -1,0 +1,124 @@
+---
+title: "Tidy data with tidyr."
+description: |
+  Rstudio Certification exam - Teaching
+author:
+  - name: Roxana Noelia Villafañe 
+    url: https://example.com/norajones
+    affiliation: Universidad Nacional del Nordeste
+    affiliation_url: https://example.com/spacelysprokets
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r metathis, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_name("github-repo" = "beatrizmilz/RStudio_Certification") %>% 
+  meta_social(
+    title = "Ordenando datos con tidyr",
+    description = paste(
+      "15’ class for the R-Studio Certification" ,
+      "Created by Beatriz Milz"
+    ),
+    url = "https://data-datum.github.io/tidyr/clase.html",
+    image = "https://beatrizmilz.github.io/RStudio_Certification/img/share-card.png",
+    image_alt = paste(
+      "First slide of",
+      "Presentation about 'Adding figures in R Markdown'",
+      "15’ class for the R-Studio Certification." ,
+      "Created by Beatriz Milz"
+    ),
+    og_type = "website",
+    og_author = "Beatriz Milz",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@beamilz"
+  )
+```
+
+### Learner Persona (Descripción de estudiantes tipo)
+
+### Alumnx 1:
+
+Luisa es licenciada en biología y actualmente se encuentra haciendo el doctorado en Biología. Se dedica al estudio de genómica en plantas. Es profesora de la materia “Introducción a la Biología” en la materia de 1er año de la facultad. Necesita aprender R para analizar sus datos y automatizar algunos procesos de los datos que obtiene experimentalmente para su tesis de doctorado. Sabe usar Excel desde la carrera de grado y aprendió algo de R base en estadística, pero de manera superficial. Quisiera aprender a hacer gráficos con ggplot2 para poder hacer visualizaciones aptas para publicar además de ordenar y limpiar sus datos.
+
+
+### Alumnx 2:
+
+Eugenia es ingeniera agrónoma y está haciendo su maestría en producción vegetal. Realiza trabajos mayormente en el campo y no es muy amiga de las computadoras. Es profesora en la materia “Citricultura” de la carrera de Ingeniería agronómica. Sabe usar infostat que es una IDE para análisis estadístico simple y Excel, además de Word y Powerpoint. Le interesa R para hacer cálculos de modelos mixtos para sus experimentos. No tiene nada de experiencia en programación. También le interesa aprender a hacer gráficos para poder publicar los trabajos de su maestría.
+
+### Mapa Conceptual del tema (Concept Map)
+
+<img src="img/map.jpg" width="1000" />
+
+
+### Evaluación formativa (Formative assessment)
+
+#### Librerias necesarias
+
+``` r
+#Si no tengo instalada la libreria tidyverse
+#install.packages("tidyverse")
+
+#cargo librerias
+library(tidyverse)
+
+```
+
+
+#### Pregunta 1
+``` r
+table3 %>%
+    separate(__________, 
+             c("cases", "population"), 
+             sep="__")
+```
+
+#### Solución 1
+
+``` r
+table3 %>%
+    separate(rate, #columna para dividir los datos
+             c("cases", "population"), #nuevas columnas
+             sep="/") #separador
+```
+
+#### Pregunta 2 
+
+```r
+table1 %>%
+  unite("rate",
+        _____, _________,
+        sep="__")
+```
+
+
+
+#### Solución 2
+
+```r
+table1 %>%
+  unite("rate",
+        cases, population,
+        sep="/")
+```
+
+
+### Slides
+
+
+```r
+library(xaringanExtra)
+xaringanExtra::embed_xaringan(
+  url = "https://data-datum.github.io/tidyr/clase.html#1",
+  ratio = "16:9"
+)
+```
+
+
+
+
