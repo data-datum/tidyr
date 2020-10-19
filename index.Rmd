@@ -18,25 +18,25 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r metathis, echo=FALSE}
 library(metathis)
 meta() %>%
-  meta_name("github-repo" = "beatrizmilz/RStudio_Certification") %>% 
+  meta_name("github-repo" = "data-datum/tidyr") %>% 
   meta_social(
     title = "Ordenando datos con tidyr",
     description = paste(
-      "15’ class for the R-Studio Certification" ,
-      "Created by Beatriz Milz"
+      "clase de Rstudio Certification" ,
+      "Slides de Roxana Noelia"
     ),
     url = "https://data-datum.github.io/tidyr/clase.html",
-    image = "https://beatrizmilz.github.io/RStudio_Certification/img/share-card.png",
+    image = "https://github.com/data-datum/tidyr/img/share-card.png",
     image_alt = paste(
       "First slide of",
-      "Presentation about 'Adding figures in R Markdown'",
-      "15’ class for the R-Studio Certification." ,
-      "Created by Beatriz Milz"
+      "Ordenando datos con tidyr",
+      "Clase de Rstudio Certification exam" ,
+      "Creado por Roxana Villafañe"
     ),
     og_type = "website",
-    og_author = "Beatriz Milz",
+    og_author = "Roxana Noelia Villafañe",
     twitter_card_type = "summary_large_image",
-    twitter_creator = "@beamilz"
+    twitter_creator = "@data_datum"
   )
 ```
 
@@ -111,14 +111,14 @@ table1 %>%
 ### Slides
 
 
-```r
+
+```{r}
 library(xaringanExtra)
 xaringanExtra::embed_xaringan(
-  url = "https://data-datum.github.io/tidyr/clase.html#1",
+  url = "https://data-datum.github.io/tidyr/clase.html",
   ratio = "16:9"
 )
 ```
 
 
-
-
+<p style="text-align:right;">[<i class="fas fa-external-link-alt"></i> Open full page]("https://data-datum.github.io/tidyr/clase.html#1)</p>
