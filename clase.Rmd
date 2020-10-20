@@ -228,6 +228,23 @@ unite(data,
 
 ---
 
+
+
+background-image: url(img/portadas-3.png)
+background-size: cover
+class: animated slideInRight fadeOutLeft, middle
+
+
+
+# Live Coding
+
+
+
+
+
+
+---
+
 # Ejercicio `r emo::ji("pencil")`
 
 ```{r}
