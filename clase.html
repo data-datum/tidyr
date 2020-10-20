@@ -4,7 +4,6 @@
     <title>clase.utf8</title>
     <meta charset="utf-8" />
     <link href="libs/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script src="libs/xaringanExtra-logo/logo.js"></script>
     <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
@@ -21,18 +20,39 @@ class: animated slideInRight fadeOutLeft, middle
 
 
 
-<style type="text/css">
-.xaringan-extra-logo {
-  width: 110px;
-  height: 128px;
-  z-index: 0;
-  background-image: url('img/tidyr.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  top:1em;right:1em;
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(img/tidyr.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
 }
 </style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
 
 
 
@@ -50,7 +70,7 @@ class: animated slideInRight fadeOutLeft, middle
 
 
 
-# Ordenando datos con tidyr
+# Separar y unir columnas don tidyr
 ### Roxana Noelia Villafañe
 
 
@@ -99,32 +119,6 @@ Las funciones de tidyr pueden caer en estas 5 categorías:
 --
 
 .footnote[Fuente: Documentación de tidyr - https://tidyr.tidyverse.org/]
-
----
-
-# Mapa Conceptual del tema
-
-&lt;br&gt;&lt;br&gt;
-
-
-&lt;img src="img/map.jpg" width="130%" style="display: block; margin: auto;" /&gt;
-
-
-
----
-
-
-# En esta clase
-
-&lt;br&gt;
-
-
-&lt;img src="img/map2.png" width="130%" style="display: block; margin: auto;" /&gt;
-
-
-
-
-
 
 
 ---

@@ -121,4 +121,4 @@ xaringanExtra::embed_xaringan(
 ```
 
 
-<p style="text-align:right;">[<i class="fas fa-external-link-alt"></i> Open full page]("https://data-datum.github.io/tidyr/clase.html#1)</p>
+<p style="text-align:right;">[<i class="fas fa-external-link-alt"></i> Open full page]("clase.html#1)</p>

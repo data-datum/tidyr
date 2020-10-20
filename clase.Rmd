@@ -65,7 +65,7 @@ xaringanExtra::use_fit_screen()
 ```
 
 
-# Ordenando datos con tidyr
+# Separar y unir columnas don tidyr
 ### Roxana Noelia Villafañe
 
 
@@ -114,36 +114,6 @@ Las funciones de tidyr pueden caer en estas 5 categorías:
 --
 
 .footnote[Fuente: Documentación de tidyr - https://tidyr.tidyverse.org/]
-
----
-
-# Mapa Conceptual del tema
-
-<br><br>
-
-
-```{r echo=FALSE, out.width = '130%',  fig.align='center'}
-knitr::include_graphics("img/map.jpg")
-```
-
-
-
----
-
-
-# En esta clase
-
-<br>
-
-
-```{r echo=FALSE, out.width = '130%',  fig.align='center'}
-knitr::include_graphics("img/map2.png")
-```
-
-
-
-
-
 
 
 ---
