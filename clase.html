@@ -13,9 +13,10 @@
   <body>
     <textarea id="source">
 
-background-image: url(img/portada.png)
+background-image: url(img/portadas.png)
 background-size: cover
 class: animated slideInRight fadeOutLeft, middle
+
 
 
 
@@ -91,35 +92,6 @@ top:1em;right:1em;
 
 ---
 
-# tidyr 
-
-Las funciones de tidyr pueden caer en estas 5 categorías:
-
---
-
-📌 Separar y unir columnas de caracteres con `separate()` y `unite()`.
-
-
---
-
-📌  [Pivotar tablas](https://tidyr.tidyverse.org/articles/pivot.html): con funciones como `pivot_longer()` y `pivot_wider()`.
-
---
-
-📌 [Rectangular datos](https://tidyr.tidyverse.org/articles/rectangle.html). 
-
---
-
-📌 [Anidar datos](https://tidyr.tidyverse.org/articles/nest.html) y desanidarlos. 
-
---
-
-📌 Trabajar con valores perdidos. 
-
---
-
-.footnote[Fuente: Documentación de tidyr - https://tidyr.tidyverse.org/]
-
 
 ---
 
@@ -142,6 +114,9 @@ Se entiende por **datos ordenados**
 --
 
 &lt;img src="img/tidy-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
 
 
 ---
@@ -169,7 +144,6 @@ tormentas
 
 
 
-
 ---
 
 # `separate()`
@@ -182,27 +156,35 @@ tormentas
 
 
 ```r
-torm1 &lt;- tormentas %&gt;% #set de datos 
-  separate(fecha, #columna a dividir
-           c("anio", "mes", "dia"), #divido en estas 3 columnas
-           sep="-") #estan separadas por guion
-torm1
-```
-
-```
-## # A tibble: 6 x 6
-##   tormenta viento presion anio  mes   dia  
-##   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
-## 1 Alberto     110    1007 2000  08    03   
-## 2 Alex         45    1009 1998  07    27   
-## 3 Allison      65    1005 1995  06    03   
-## 4 Ana          40    1013 1997  06    30   
-## 5 Arlene       50    1010 1999  06    11   
-## 6 Arthur       45    1010 1996  06    17
+separate(
+  data,
+  col,
+  into,
+  sep = "[^[:alnum:]]+",
+  remove = TRUE,
+  convert = FALSE,
+  extra = "warn",
+  fill = "warn",
+  ...
+)
 ```
 
 
 .footnote[Mas información: https://tidyr.tidyverse.org/reference/separate.html]
+
+---
+
+
+background-image: url(img/portadas-2.png)
+background-size: cover
+class: animated slideInRight fadeOutLeft, middle
+
+
+
+# Live Coding
+
+
+
 
 ---
 
@@ -275,23 +257,12 @@ table3 %&gt;%
 
 
 ```r
-torm2 &lt;- torm1 %&gt;%
-  unite("fecha", #se crea la columna date
-        anio, mes, dia, #a partir de estas tres
-        sep="-") #separadas por un guion
-torm2
-```
-
-```
-## # A tibble: 6 x 4
-##   tormenta viento presion fecha     
-##   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;     
-## 1 Alberto     110    1007 2000-08-03
-## 2 Alex         45    1009 1998-07-27
-## 3 Allison      65    1005 1995-06-03
-## 4 Ana          40    1013 1997-06-30
-## 5 Arlene       50    1010 1999-06-11
-## 6 Arthur       45    1010 1996-06-17
+unite(data, 
+      col, 
+      ..., 
+      sep = "_", 
+      remove = TRUE, 
+      na.rm = FALSE)
 ```
 
 
@@ -355,8 +326,11 @@ table1 %&gt;%
 
 
 
+
+
+
 ---
-background-image: url(img/portada.png)
+background-image: url(img/portadas-1.png)
 background-size: cover
 class: animated slideInRight fadeOutLeft, middle
 
