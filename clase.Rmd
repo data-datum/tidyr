@@ -65,7 +65,7 @@ xaringanExtra::use_fit_screen()
 ```
 
 
-# Separar y unir columnas don tidyr
+# Separar y unir columnas con tidyr
 ### Roxana Noelia Villafañe
 
 
