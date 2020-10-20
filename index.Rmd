@@ -1,12 +1,12 @@
 ---
-title: "Tidy data with tidyr."
+title: "Uniendo y separando columnas con tidyr"
 description: |
   Rstudio Certification exam - Teaching
 author:
   - name: Roxana Noelia Villafañe 
-    url: https://example.com/norajones
+    url: https://roxananoelia.netlify.app/
     affiliation: Universidad Nacional del Nordeste
-    affiliation_url: https://example.com/spacelysprokets
+    affiliation_url: 
 date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
